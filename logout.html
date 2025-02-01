@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>Logout</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = 'welcome.html';
+        });
+    </script>
+</head>
+<body>
+    <h1>Logging out...</h1>
+</body>
+</html>

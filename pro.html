@@ -1,0 +1,214 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="home.css">
+    <title>Library Books</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 70px;
+        }
+
+        header {
+            background: white;
+            color: black; 
+            padding: 15px 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+            position: fixed; 
+            top: 0;
+            width: 100%; 
+            z-index: 1000; 
+        }
+
+        .logo {
+            display: flex;
+            align-items: center; 
+        }
+
+        .logo img {
+            height: 50px; 
+            margin-right: 20px; 
+        }
+
+        nav {
+            display: flex; 
+        }
+
+        nav a {
+            color: black; 
+            text-decoration: none;
+            padding: 10px 15px; 
+            margin: 0 10px; 
+            transition: background 0.3s; 
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2); 
+            border-radius: 5px; 
+        }
+
+        .icons {
+            display: flex; 
+            align-items: center; 
+        }
+
+        .icons i {
+            color: blue; 
+            margin-left: 20px; 
+            cursor: pointer;
+            transition: color 0.3s; 
+        }
+
+        .icons i:hover {
+            color: #FFD700; 
+        }
+
+
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .book {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin: 10px;
+            position: relative; 
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: calc(33.33% - 40px);
+            box-sizing: border-box; 
+        }
+
+        .book:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .book img {
+            width: 150px;
+            height: 250px;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+
+        .book img:hover {
+            transform: scale(1.1);
+        }
+
+        .book1 { background-color: #FFFFE0; }
+        .book2 { background-color: #ADD8E6; } 
+        .book3 { background-color: #8FBC8F; }
+        .book4 { background-color: #696969; } 
+        .book5 { background-color: #D2A679; } 
+        .book6 { background-color: #FFE4C4; } 
+        .book7 { background-color: #FFA07A; } 
+        .book8 { background-color: #E0FFFF; } 
+        .book9 { background-color:  #F0F8FF; } 
+        .book10 { background-color: #E6E6FA; } 
+        .book11 { background-color: #FFB6C1; } 
+        .book12 { background-color: #ADD8E6; }
+
+        .more-info {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%); 
+            background-color: #4CAF50; 
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .more-info:hover {
+            background-color: #45a049; 
+        }
+    </style>
+</head>
+<header>
+    <div class="logo">
+        <a href="welcome.html"><img src="jain.png" alt="Logo"> </a>
+    </div>
+    <nav>
+        <a href="home.html">About</a>
+        <a href="pro.html">Books</a>
+        <a href="faculty.html">Faculty</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="contactus.html">Feedback</a>
+        <a href="profile.php">profile</a>
+    </nav>
+    <div class="icons">
+        <div class="icons">
+            <a href="loginproj.html"><i class="fas fa-user" title="Login"></i></a>
+            <a href="logout.html"><i class="fas fa-sign-out-alt" title="Logout"></i></a> 
+        </div>
+    </div>
+</header>
+<body>
+    <br>
+    <center><h1>Books</h1></center>
+    <div class="book-container">
+        <div class="book book1">
+            <img src="1.jpg" alt="Book 1">
+            <a href="project.html"><button class="more-info">More Info</button></a>
+        </div>
+        <div class="book book2">
+            <img src="2.jpg" alt="Book 2">
+            <a href="project1.html"><button class="more-info">More Info</button></a>
+        </div>
+        <div class="book book3">
+            <img src="3.jpg" alt="Book 3">
+            <a href="project2.html"><button class="more-info">More Info</button></a>
+        </div>
+        <div class="book book4">
+            <img src="4.jpg" alt="Book 4">
+            <a href="project3.html"><button class="more-info">More Info</button></a>
+        </div>
+        <div class="book book5">
+            <img src="5.jpeg" alt="Book 5">
+            <a href="project4.html"><button class="more-info">More Info</button></a>
+        </div>
+        <div class="book book6">
+            <img src="6.jpg" alt="Book 6">
+            <a href="project5.html"><button class="more-info">More Info</button></a>
+        </div>
+        <div class="book book7">
+            <img src="7.jpg" alt="Book 7">
+            <a href="project6.html"><button class="more-info">More Info</button></a>
+        </div>
+        <div class="book book8">
+            <img src="8.jpg" alt="Book 8">
+            <a href="project7.html"><button class="more-info">More Info</button></a>
+        </div>
+        <div class="book book9">
+            <img src="9.png" alt="Book 9">
+            <a href="project8.html"><button class="more-info">More Info</button></a>
+        </div>
+        <div class="book book10">
+            <img src="10.jpg" alt="Book 10">
+            <a href="project9.html"><button class="more-info">More Info</button></a>
+        </div>
+        <div class="book book11">
+            <img src="11.jpg" alt="Book 11">
+            <a href="project10.html"><button class="more-info">More Info</button></a>
+        </div>
+        <div class="book book12">
+            <img src="12.jpg" alt="Book 12">
+            <a href="project11.html"><button class="more-info">More Info</button></a>
+        </div>
+    </div>
+</body>
+</html>

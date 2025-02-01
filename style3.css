@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    color: rgb(88, 76, 119);
+}
+#Contact{
+    width: 80%;
+    height: 70%;
+    margin: 5% 10%;
+    box-shadow: 3px 3px 15px gray;
+    background: rgb(242, 226, 225);
+}
+#Contact h2{
+    text-transform: uppercase;
+}
+.con-box{
+    display: inline-block;
+}
+.info{
+    color: rgb(201, 192, 228);
+    height: 100%;
+    width: 39%;
+    background: rgb(88, 76, 119);
+}
+.con-form{
+    width: 60%;
+}
+.con{
+    padding: 5%;
+}
+.con h2{
+    padding-top: 0;
+    margin-top: 0;
+}
+.info ul li{
+    list-style: none;
+    margin: 8% 0;
+}
+.social-media{
+    margin-top: 30%;
+}
+.social-media ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 5%;
+}
+.social-media ul li img{
+    width: 165%;
+}
+h2, .form input, .form textarea, #submit-button{
+    display: block;
+    border: none;
+    margin: 3%;
+    width: 90%;
+    padding: 2%;
+}
+.con-form input, .con-form textarea{
+    background: rgb(88, 76, 119)
+}
+::placeholder{
+    color: rgb(88, 76, 119);
+}
+.con-form h2{
+    color: rgb(88, 76, 119);
+}
+#submit-button{
+    padding: 1cm 10cm;
+    color: rgb(201, 192, 228);
+    width: 94%;
+    background: rgb(88, 76, 119);
+}
+@media(max-width:1024px){
+    #Contact{
+        width: 100%;
+        margin: 0;
+        background: none;
+
+    }
+    .info, .con-form{
+        width: 100%;
+        height: 100%;
+    }
+    .social-media{
+        margin-top: 10%;
+    }
+}

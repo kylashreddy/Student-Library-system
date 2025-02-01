@@ -1,0 +1,250 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="home.css">
+    <title>Library Staff</title>
+    <style>
+        header {
+            background: white;
+            color: black; 
+            padding: 15px 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+            position: fixed; 
+            top: 0;
+            width: 100%; 
+            z-index: 1000; 
+        }
+
+        .logo {
+            display: flex;
+            align-items: center; 
+        }
+
+        .logo img {
+            height: 50px; 
+            margin-right: 20px; 
+        }
+
+        nav {
+            display: flex; 
+        }
+
+        nav a {
+            color: black; 
+            text-decoration: none;
+            padding: 10px 15px; 
+            margin: 0 10px; 
+            transition: background 0.3s; 
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2); 
+            border-radius: 5px; 
+        }
+
+        .icons {
+            display: flex; 
+            align-items: center; 
+        }
+
+        .icons i {
+            color: blue; 
+            margin-left: 20px; 
+            cursor: pointer;
+            transition: color 0.3s; 
+        }
+
+        .icons i:hover {
+            color: #FFD700; 
+        }
+
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 70px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h1 span {
+            display: block;
+            width: 100px;
+            height: 2px;
+            background-color: #ffd700;
+            margin: 10px auto;
+        }
+
+        .faculty {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .faculty-member {
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .faculty-member img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover; 
+            border-radius: 5px; 
+        }
+
+        .faculty-member h3 {
+            margin-top: 10px;
+        }
+
+        .faculty-member p {
+            margin: 5px 0;
+        }
+
+        .faculty-member a {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .faculty-member a:hover {
+            background-color: #0056b3;
+        }
+
+        .sorting-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .sorting-bar select {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="welcome.html"><img src="jain.png" alt="Logo"> </a>
+        </div>
+        <nav>
+            <a href="home.html">About</a>
+            <a href="pro.html">Books</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="contact.php">Contact Us</a>
+            <a href="contactus.html">Feedback</a>
+            <a href="profile.php">profile</a>
+        </nav>
+        <div class="icons">
+            <a href="loginproj.html"><i class="fas fa-user" title="Login"></i></a>
+            <a href="logout.html"><i class="fas fa-sign-out-alt" title="Logout"></i></a> 
+        </div>
+    </header>
+    <h1>Library Faculty <span></span></h1>
+    <div class="sorting-bar">
+        <label for="campus-select">Select Block</label>
+        <select id="campus-select" onchange="filterCampus()">
+            <option value="all">All Blocks</option>
+            <option value="Campus A">FET Block</option>
+            <option value="Campus B">AeroSpace Block</option>
+            <option value="Campus C">Electrical Block</option>
+            <option value="Campus D">Mechanical Block</option>
+        </select>
+        <label for="faculty-select">Sort by Faculty Type:</label>
+        <select id="faculty-select" onchange="filterFaculty()">
+            <option value="all">All</option>
+            <option value="Chief Librarian">Chief Librarian</option>
+            <option value="Library Staff">Library Staff</option>
+            <option value="Library Assistant">Library Assistant</option>
+        </select>
+    </div>
+    <div class="faculty">
+        <div class="faculty-member" data-type="Chief Librarian" data-campus="Campus A">
+            <img src="A176.png">
+            <h3>Mr.Manjunath H N</h3>
+            <p>Chief Librarian</p>
+        </div>
+        <div class="faculty-member" data-type="Library Assistant" data-campus="Campus A">
+            <img src="A215.png">
+            <h3>Mr.Somesh R</h3>
+            <p>Library Assistant</p>
+        </div>
+        <div class="faculty-member" data-type="Library Assistant" data-campus="Campus A">
+            <img src="A302.png">
+            <h3>Mr.Ravi Kumar K</h3>
+            <p>Library Assistant</p>
+        </div>
+        <div class="faculty-member" data-type="Library Assistant" data-campus="Campus A">
+            <img src="A311.png">
+            <h3>Mrs.Prabhavathi H N</h3>
+            <p>Library Assistant</p>
+        </div>
+        <div class="faculty-member" data-type="Library Assistant" data-campus="Campus A">
+            <img src="A466.png">
+            <h3>Mrs.Shwetha H</h3>
+            <p>Library Assistant</p>
+        </div>
+        <div class="faculty-member" data-type="Library Assistant" data-campus="Campus A">
+            <img src="A679.png">
+            <h3>Mrs.Asha G</h3>
+            <p>Library Assistant</p>
+        </div>
+        <div class="faculty-member" data-type="Library Staff" data-campus="Campus A">
+            <img src="A382.png">
+            <h3>Mr.Anil Kumar D G</h3>
+            <p>Library Staff</p>
+        </div>
+        <div class="faculty-member" data-type="Library Staff" data-campus="Campus A">
+            <img src="A126.jpg">
+            <h3>Mr.Deepu K V</h3>
+            <p>Library Staff</p>
+        </div>
+        <div class="faculty-member" data-type="Library Staff" data-campus="Campus A">
+            <img src="A243.png">
+            <h3>Mr.Lakshmi Narayna N</h3>
+            <p>Library Staff</p>
+        </div>
+    </div>
+    <script>
+        function filterFaculty() {
+            const facultySelect = document.getElementById('faculty-select');
+            const selectedFaculty = facultySelect.value;
+            const campusSelect = document.getElementById('campus-select');
+            const selectedCampus = campusSelect.value;
+            const facultyMembers = document.querySelectorAll('.faculty-member');
+
+            facultyMembers.forEach(member => {
+                const matchesFaculty = selectedFaculty === 'all' || member.getAttribute('data-type') === selectedFaculty;
+                const matchesCampus = selectedCampus === 'all' || member.getAttribute('data-campus') === selectedCampus;
+
+                if (matchesFaculty && matchesCampus) {
+                    member.style.display = 'block';
+                } else {
+                    member.style.display = 'none';
+                }
+            });
+        }
+
+        function filterCampus() {
+            filterFaculty();
+        }
+    </script>
+</body>
+</html>

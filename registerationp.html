@@ -1,0 +1,206 @@
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style1.css">
+    <script>
+        function validateForm() {
+            const firstName = document.forms["registrationForm"]["FirstName"].value;
+            const lastName = document.forms["registrationForm"]["LastName"].value;
+            const dob = document.forms["registrationForm"]["DOB"].value;
+            const usn = document.forms["registrationForm"]["USN"].value;
+            const phoneNo = document.forms["registrationForm"]["PhoneNo"].value;
+            const email = document.forms["registrationForm"]["Email"].value;
+            const password = document.forms["registrationForm"]["Password"].value;
+            const confirmPassword = document.forms["registrationForm"]["ConfirmPassword"].value;
+            if (!firstName || !lastName || !dob || !usn || !phoneNo || !email || !password || !confirmPassword) {
+                alert("All fields must be filled out.");
+                return false;
+            }
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            const phoneRegex = /^\d{10}$/;
+            if (!phoneRegex.test(phoneNo)) {
+                alert("Phone number must be 10 digits.");
+                return false;
+            }
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+<style>
+    body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 70px;
+        }
+
+        header {
+            background: white;
+            color: black; 
+            padding: 15px 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+            position: fixed; 
+            top: 0;
+            width: 100%; 
+            z-index: 1000; 
+        }
+
+        .logo {
+            display: flex;
+            align-items: center; 
+        }
+
+        .logo img {
+            height: 50px; 
+            margin-right: 20px; 
+        }
+
+        nav {
+            display: flex; 
+        }
+
+        nav a {
+            color: black; 
+            text-decoration: none;
+            padding: 10px 15px; 
+            margin: 0 10px; 
+            transition: background 0.3s; 
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2); 
+            border-radius: 5px; 
+        }
+
+        .icons {
+            display: flex; 
+            align-items: center; 
+        }
+
+        .icons i {
+            color: blue; 
+            margin-left: 20px; 
+            cursor: pointer;
+            transition: color 0.3s; 
+        }
+
+        .icons i:hover {
+            color: #FFD700; 
+        }
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="welcome.html"><img src="jain.png" alt="Logo"> </a>
+        </div>
+        <nav>
+            <a href="home.html">About</a>
+            <a href="pro.html">Books</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="contact.php">Contact Us</a>
+            <a href="contactus.html">Feedback</a>
+            <a href="profile.php">profile</a>
+        </nav>
+       
+        <div class="icons">
+            <a href="loginproj.html"><i class="fas fa-user" title="Login"></i></a>
+            <a href="logout.html"><i class="fas fa-sign-out-alt" title="Logout"></i></a> 
+        </div>
+    </header>
+    <div class="container">
+        <div class="title">Registration Form</div>
+        <form name="registrationForm" action="register.php" method="post" onsubmit="return validateForm()">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">User  Type</span>
+                    <div class="radio-group">
+                        <input type="radio" name="userType" id="faculty" value="Faculty" required>
+                        <label for="faculty">Faculty</label>
+                        <input type="radio" name="userType" id="student" value="Student" required>
+                        <label for="student">Student</label>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <span class="details">First Name</span>
+                    <input type="text" name="FirstName" placeholder="Enter your First Name" required/>
+                </div>
+                <div class="input-box">
+                    <span class="details">Last Name</span>
+                    <input type="text" name="LastName" placeholder="Enter your Last Name" required/>
+                </div>              
+                <div class="input-box">
+                    <span class="details">DOB</span>
+                    <input type="text" name="DOB" placeholder="DD-MM-YYYY" required/>
+                </div>                
+                <div class="input-box">
+                    <span class="details">USN</span>
+                    <input type="text" name="USN" placeholder="Enter your USN" required/>
+                </div>               
+                <div class="input-box">
+                    <span class="details">Phone No</span>
+                    <input type="text" name="PhoneNo" placeholder="Enter your Phone No" required/>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="email" name="Email" placeholder="Enter your Email" required/>
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="password" name="Password" placeholder="Password" required/>
+                </div>    
+                <div class="input-box">
+                    <span class="details">Confirm Password</span>
+                    <input type="password" name="ConfirmPassword" placeholder="Confirm your Password" required/>
+                </div>                  
+                <div class="input-box">
+                    <span class="details">Department</span>
+                    <select name="Department" required>
+                        <option value="Select">Select</option>  
+                        <option value="CSE -Gen">CSE-Gen</option>  
+                        <option value="CSE-TWO">CSE-TWO</option>  
+                        <option value="CSE-AIML">CSE-AIML</option>  
+                        <option value="CSE-DS">CSE-DS</option>  
+                        <option value="CSE-CS">CSE-CS</option>  
+                        <option value="CSE-SE">CSE-SE</option> 
+                    </select>
+                </div>
+            </div>
+            <div class="gender-details">
+                <span class="gender-title">Gender</span>
+                <div class="category">
+                    <input type="radio" name="gender" id="dot-1" value="M" required>
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        Male
+                    </label>
+                    <input type="radio" name="gender" id="dot-2" value="F" required>
+                    <label for="dot-2">
+                        <span class="dot one"></span>
+                        Female
+                    </label>
+                    <input type="radio" name="gender" id="dot-3" value="O" required>
+                    <label for="dot-3">
+                        <span class="dot one"></span>
+                        Prefer not to say
+                    </label>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
